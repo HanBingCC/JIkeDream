@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <fragment
+        android:id="@+id/title_timu"
+        android:name="com.example.dremone.fragment.FragmentTitleBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_timu" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/tui1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                
+                 >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/title_pager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <com.viewpagerindicator.LinePageIndicator
+                    android:id="@+id/title_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                     />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/tui2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tui1" >
+
+                <GridView
+                    android:id="@+id/home_gridview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:paddingTop="8.0dip"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth" />
+
+                <View
+                    android:id="@+id/home_gridview_footer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_below="@id/home_gridview"
+                    android:layout_marginTop="8.0dip"
+                    android:background="@drawable/bg_line"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_baselist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tui2" >
+
+                <TextView
+                    android:id="@+id/item_expand_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip"
+                    android:drawableLeft="@drawable/ic_green_circle"
+                    android:drawablePadding="18.0dip"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip"
+                    android:text="精选课程"
+                    android:textColor="#ffa9a9a9"
+                    android:textSize="15.0sp" />
+
+                <com.example.guid.CurriculumListView
+                    android:divider="@null"
+                    android:cacheColorHint="@color/white"
+                    android:dividerHeight="16dp"
+                    android:id="@+id/lv_expand_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_expand_title"
+                    android:orientation="vertical"
+                    android:padding="8dp" >
+                </com.example.guid.CurriculumListView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

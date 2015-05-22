@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"../../../mybatis-3-mapper.dtd">
+<mapper namespace="com.jike.orm.DurationMapper">
+    <!--根据课程Id求出课程的课时-->
+	<select id="findCurriculumId" resultType="map" parameterType="int">
+		select * from duration_tb where curriculum_id=#{id} and isValid=1
+	</select>
+	<!--根据课时Id求出课时信息-->
+	<select id="findDurationId" resultType="map" parameterType="int">
+		select * from duration_tb where id=#{id} and isValid=1
+	</select>
+</mapper>

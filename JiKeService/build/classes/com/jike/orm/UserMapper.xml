@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"../../../mybatis-3-mapper.dtd">
+<mapper namespace="com.jike.orm.UserMapper">
+    <!--用户登录-->
+	<select id="loginUser" resultType="map" parameterType="map">
+		SELECT
+		user_tb.id,
+		user_tb.nick_name,
+		user_tb.image_url
+		FROM
+		user_tb
+		WHERE
+		user_tb.phone = '${phone}' AND
+		user_tb.`password` = '${password}' AND
+		user_tb.isvalid = '1'
+	</select>
+	<!--查询用户头像-->
+	<update id="findByIdUpdateHead" parameterType="map">
+		update user_tb set image_url='${image_url}' where
+		id=${id}
+	</update>
+</mapper>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.edmodo.cropper.CropImageView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ci_CropImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        custom:aspectRatioX="120"
+        custom:aspectRatioY="120" >
+    </com.edmodo.cropper.CropImageView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/image_button_cutting_left"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:src="@drawable/umeng_socialize_action_back_selected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/image_button_cutting_left"
+            android:gravity="center_horizontal"
+            android:text="头像设置"
+            android:textSize="16sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/iv_cutting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center_horizontal"
+            android:paddingRight="10dp"
+            android:src="@drawable/umeng_socialize_title_right_bt_selected" />
+    </RelativeLayout>
+
+</RelativeLayout>

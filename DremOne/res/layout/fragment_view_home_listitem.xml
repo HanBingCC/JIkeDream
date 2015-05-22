@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8.0dip"
+    android:layout_marginRight="8.0dip"
+    android:layout_marginTop="16.0dip"
+    android:background="@drawable/bg_card_sel" >
+
+    <TextView
+        android:id="@+id/list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5.0dip"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginTop="5.0dip"
+        android:text="Hadoop概述"
+        android:textColor="#ff181818"
+        android:textSize="18.0sp" />
+
+    <com.loopj.android.image.SmartImageView
+        android:id="@+id/list_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="190.0dip"
+        android:layout_below="@id/list_title"
+        android:layout_marginLeft="1.0dip"
+        android:layout_marginRight="1.0dip"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/list_black_mask"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip"
+        android:layout_alignLeft="@id/list_photo"
+        android:layout_alignTop="@id/list_photo"
+        android:layout_below="@id/list_photo"
+        android:layout_marginLeft="1.0dip"
+        android:layout_marginRight="1.0dip"
+        android:background="@drawable/bg_black_mask" >
+
+        <TextView
+            android:id="@+id/item_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16.0dip"
+            android:text="3课时"
+            android:textColor="@android:color/white"
+            android:textSize="12.0sp" />
+
+        <ImageView
+            android:id="@+id/item_indicator"
+            android:layout_width="33.0dip"
+            android:layout_height="16.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16.0dip" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/list_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/list_photo"
+        android:padding="16.0dip"
+        android:text="本课程介绍了Hadoop技术的由来,Hadoop技术的优势，如何创建本地的Hadoop集群，创建托管本地的Hadoop集群等内容"
+        android:textColor="#ff969696"
+        android:textSize="12.0sp" />
+
+</RelativeLayout>

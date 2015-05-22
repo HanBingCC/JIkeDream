@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"../../../mybatis-3-mapper.dtd">
+<mapper namespace="com.jike.orm.CurriculumMapper">
+    <!--随机求出5条推荐的课程信息-->
+	<select id="findRandomCurriculum" resultType="map">
+		SELECT t1 .id,t1.title,t1.url,t1.briefIntroduction,t1.useFlag,(
+
+select count(1) from duration_tb as t2 where t2.curriculum_id=t1.id  and t2.isValid=1
+
+
+)  'durationCount'	  FROM
+		curriculum_tb as t1 where t1.isValid=1 ORDER BY rand() LIMIT 5 ;
+	</select>
+</mapper>

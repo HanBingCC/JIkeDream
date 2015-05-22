@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00000000"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/download_content_view_image"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/download_content_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/download_content_view_image"
+        android:text="空标题"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/download_content_view_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/btn_cancel"
+        android:text="下载完成" />
+
+    <Button
+        android:id="@id/btn_cancel"
+        style="@android:style/MediaButton.Pause"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:text="×" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/download_content_view_title"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/download_content_view_image"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/download_content_view_progress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1000"
+            android:max="100" 
+            android:progress="100"
+            />
+
+        <Button
+            android:id="@+id/btn_playin"
+            style="@android:style/MediaButton.Pause"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="▶" />
+    </LinearLayout>
+
+</RelativeLayout>

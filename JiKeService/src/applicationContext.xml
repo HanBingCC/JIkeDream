@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd
+	">
+	<!-- 扫描dao,service，创建对象 -->
+	<context:component-scan base-package="com.jike.dao" />
+	<context:component-scan base-package="com.jike.service" />
+	<context:component-scan base-package="com.jike.common" />
+	<!-- 1.获取数据源 -->
+	<bean id="driverManagerDataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/jike_db"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="753951"></property>
+	</bean>
+
+	<!-- 2.获取SqlSession -->
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="driverManagerDataSource"></property>
+	</bean>
+
+	<!-- 3.获取Mapper接口的实现类 -->
+	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.jike.orm"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactoryBean"></property>
+	</bean>
+
+	<!--4. 配置事务管理器 -->
+	<bean id="dataSourceTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="driverManagerDataSource"></property>
+	</bean>
+
+	<!--5.以注解的方式管理事务 -->
+	<tx:annotation-driven transaction-manager="dataSourceTransactionManager" />
+
+
+</beans>

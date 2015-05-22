@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300.0dip"
+    android:layout_height="fill_parent"
+    android:layout_gravity="left"
+    android:background="#ffffffff" xmlns:app="http://schemas.android.com/apk/res/com.example.dremone">
+
+    <RelativeLayout
+        android:id="@+id/menu_login"
+        android:layout_width="fill_parent"
+        android:layout_height="210.0dip"
+        android:layout_gravity="center"
+        android:background="#ff000000" >
+
+        <RelativeLayout
+            android:id="@+id/menu_login_img_container"
+            android:layout_width="62.0dip"
+            android:layout_height="62.0dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_blank_user" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/menu_login_img"
+                android:layout_width="60.0dp"
+                android:layout_height="60.0dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_blank_user"
+                app:border_color="@color/light"
+                app:border_width="1dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/menu_login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_login_img_container"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18.0dip"
+            android:text="登录点我"
+            android:textColor="#ffffffff"
+            android:textSize="15.0sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/menu_divider0"
+        android:layout_width="wrap_content"
+        android:layout_height="1.0dip"
+        android:layout_below="@id/menu_login"
+        android:background="@drawable/bg_devider" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/menu_divider0"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/menu_path_container"
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip" >
+
+                <TextView
+                    android:id="@+id/menu_path"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    android:drawableLeft="@drawable/ic_path"
+                    android:drawablePadding="30.0dip"
+                    android:gravity="center_vertical"
+                    android:text="知识体系图"
+                    android:textColor="#ff666666"
+                    android:textSize="16.0sp" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/menu_divider1"
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:background="@drawable/bg_devider" />
+
+            <FrameLayout
+                android:id="@+id/menu_vip_container"
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip" >
+
+                <TextView
+                    android:id="@+id/menu_vip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    android:drawableLeft="@drawable/ic_menu_vip"
+                    android:drawablePadding="30.0dip"
+                    android:gravity="center_vertical"
+                    android:text="会员中心"
+                    android:textColor="#ff666666"
+                    android:textSize="16.0sp" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/menu_divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:background="@drawable/bg_devider" />
+
+            <FrameLayout
+                android:id="@+id/menu_download_container"
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip" >
+
+                <TextView
+                    android:id="@+id/menu_download"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    android:drawableLeft="@drawable/ic_download"
+                    android:drawablePadding="30.0dip"
+                    android:gravity="center_vertical"
+                    android:text="下载中心"
+                    android:textColor="#ff666666"
+                    android:textSize="16.0sp" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/menu_divider3"
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:background="@drawable/bg_devider" />
+
+            <FrameLayout
+                android:id="@+id/menu_history_container"
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip" >
+
+                <TextView
+                    android:id="@+id/menu_history"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    android:drawableLeft="@drawable/ic_history"
+                    android:drawablePadding="30.0dip"
+                    android:gravity="center_vertical"
+                    android:text="观看历史"
+                    android:textColor="#ff666666"
+                    android:textSize="16.0sp" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/menu_divider4"
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:background="@drawable/bg_devider" />
+
+            <FrameLayout
+                android:id="@+id/menu_fav_container"
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip" >
+
+                <TextView
+                    android:id="@+id/menu_fav"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    android:drawableLeft="@drawable/ic_collect"
+                    android:drawablePadding="30.0dip"
+                    android:gravity="center_vertical"
+                    android:text="收藏课程"
+                    android:textColor="#ff666666"
+                    android:textSize="16.0sp" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/menu_divider5"
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:background="@drawable/bg_devider" />
+
+            <FrameLayout
+                android:id="@+id/menu_config_container"
+                android:layout_width="fill_parent"
+                android:layout_height="55.0dip" >
+
+                <TextView
+                    android:id="@+id/menu_config"
+                    android:layout_width="fill_parent"
+                    android:layout_height="55.0dip"
+                    android:layout_marginLeft="16.0dip"
+                    android:drawableLeft="@drawable/ic_setting"
+                    android:drawablePadding="30.0dip"
+                    android:gravity="center_vertical"
+                    android:text="设置"
+                    android:textColor="#ff666666"
+                    android:textSize="16.0sp" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/menu_divider6"
+                android:layout_width="wrap_content"
+                android:layout_height="1.0dip"
+                android:background="@drawable/bg_devider" />
+
+            <View
+                android:id="@+id/occupy"
+                android:layout_width="fill_parent"
+                android:layout_height="110.0dip"
+                android:layout_weight="1.0" />
+
+            <ImageView
+                android:id="@+id/menu_logo"
+                android:layout_width="80.0dip"
+                android:layout_height="29.0dip"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_logo"
+                android:contentDescription="menu_logo" />
+
+            <TextView
+                android:id="@+id/memu_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffbcbcbc"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
